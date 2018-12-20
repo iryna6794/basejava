@@ -2,12 +2,12 @@
  * Array based storage for Resumes
  */
 public class ArrayStorage {
-    Resume[] storage = new Resume[10000];
+    Resume[] storage = new Resume[10_000];
 
     void clear() {
     }
 
-    void save(Resume r) {
+    void save(Resume resume) {
     }
 
     Resume get(String uuid) {
