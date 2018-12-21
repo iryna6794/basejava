@@ -1,8 +1,10 @@
+package lesson1;
+
 import java.lang.reflect.Field;
 import java.util.Arrays;
 
 /**
- * Test for your ArrayStorage implementation
+ * Test for your lesson1.ArrayStorage implementation
  */
 public class MainTestArrayStorage {
     private static final ArrayStorageImpl TEST_ARRAY_STORAGE = new ArrayStorageImpl();
@@ -10,7 +12,7 @@ public class MainTestArrayStorage {
 
     public static void main(String[] args) {
 
-        //test save(Resume resume)
+        //test save(lesson1.Resume resume)
         for (int i = 0; i < SIZE; i++) {
             Resume resume = new Resume();
             resume.uuid = String.valueOf(i);

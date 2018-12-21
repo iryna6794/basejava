@@ -1,3 +1,5 @@
+package lesson1;
+
 /**
  * Initial resume class
  */

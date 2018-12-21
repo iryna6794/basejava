@@ -15,6 +15,6 @@
 
 ## Домашнее задание
 - Сделать рефакторинг тестов: `saveOverflow` должно быть только для Array реализаций.
-- Рефакторинг: в конструктор Resume добавить второй параметр `fullName`
-- Сделать рефакторинг всех реализаций `Storage`: заменить метод `Resume[] getAll()` на `List<Resume> getAllSorted()`
+- Рефакторинг: в конструктор lesson1.Resume добавить второй параметр `fullName`
+- Сделать рефакторинг всех реализаций `Storage`: заменить метод `lesson1.Resume[] getAll()` на `List<lesson1.Resume> getAllSorted()`
 - Реализовать до конца `MapUuidStorage`. Подумать что еще может быть search key в реализации на основе Map.
