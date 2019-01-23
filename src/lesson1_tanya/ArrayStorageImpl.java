@@ -7,8 +7,11 @@ public class ArrayStorageImpl {
     int size;
 
     void save(Resume resume) {
-        //Все резюме в хранилище имеют уникальный uuid, что исключает повторы
-        //выставить это как задание ко второму уроку
+        for (int i = 0; i < size; i++) {
+            if (storage[i].uuid.equals(resume.uuid)) {
+                return;
+            }
+        }
         storage[size] = resume;
         size++;
     }
