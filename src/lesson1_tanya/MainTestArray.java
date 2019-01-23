@@ -34,7 +34,6 @@ public class MainTestArray {
     }
 
 
-
     private static void testSave() {
         fillData();
 
@@ -63,12 +62,21 @@ public class MainTestArray {
 
     private static void testGet() {
         fillData();
+
         for (int i = 1; i <= initSize; i++) {
-            if (!arrayStorage.get("uuid" + i).uuid.equals("uuid" + i)) {
+            Resume resume = arrayStorage.get("uuid" + i);
+
+            if(resume == null){
+                System.out.println("method get contains mistakes");
+                break;
+            }
+
+            if (!resume.uuid.equals("uuid" + i)) {
                 System.out.println("method get contains mistakes");
                 break;
             }
         }
+
         if (arrayStorage.size() != initSize) {
             System.out.println("method get contains mistakes");
         }
@@ -92,6 +100,7 @@ public class MainTestArray {
     private static void testGetAll() {
         fillData();
         Resume[] resumes = new Resume[]{RESUME1, RESUME2, RESUME3, RESUME4, RESUME5};
+
         if (!Arrays.equals(resumes, arrayStorage.getAll())) {
             System.out.println("method getAll contains mistakes");
         }
