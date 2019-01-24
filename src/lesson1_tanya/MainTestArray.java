@@ -130,9 +130,7 @@ public class MainTestArray {
     }
 
     private static void fillData() {
-        for (int i = 0; i < storage.length; i++) {
-            storage[i] = null;
-        }
+        arrayStorage.setSize(5);
 
         storage[0] = RESUME1;
         storage[1] = RESUME2;
@@ -140,6 +138,9 @@ public class MainTestArray {
         storage[3] = RESUME4;
         storage[4] = RESUME5;
 
-        arrayStorage.setSize(5);
+        for (int i = storage.length-1; i >= initSize; i--) {
+            storage[i] = null;
+        }
+
     }
 }
