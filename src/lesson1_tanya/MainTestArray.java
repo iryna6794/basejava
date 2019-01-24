@@ -6,7 +6,7 @@ public class MainTestArray {
 
     private static ArrayStorageImpl arrayStorage;
     private static Resume[] storage;
-    private static int initSize = 5;
+    private static int initSize;
 
     private static final Resume RESUME1 = new Resume();
     private static final Resume RESUME2 = new Resume();
@@ -66,7 +66,7 @@ public class MainTestArray {
         for (int i = 1; i <= initSize; i++) {
             Resume resume = arrayStorage.get("uuid" + i);
 
-            if(resume == null){
+            if (resume == null) {
                 System.out.println("method get contains mistakes");
                 break;
             }
@@ -132,6 +132,7 @@ public class MainTestArray {
     private static void fillData() {
         arrayStorage = new ArrayStorageImpl();
         storage = arrayStorage.getStorage();
+        initSize = 5;
 
         storage[0] = RESUME1;
         storage[1] = RESUME2;
