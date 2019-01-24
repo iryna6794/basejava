@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class MainTestArray {
 
-    private static ArrayStorageImpl arrayStorage = new ArrayStorageImpl();
-    private static Resume[] storage = arrayStorage.getStorage();
+    private static ArrayStorageImpl arrayStorage;
+    private static Resume[] storage;
     private static int initSize = 5;
 
     private static final Resume RESUME1 = new Resume();
@@ -130,7 +130,8 @@ public class MainTestArray {
     }
 
     private static void fillData() {
-        arrayStorage.setSize(5);
+        arrayStorage = new ArrayStorageImpl();
+        storage = arrayStorage.getStorage();
 
         storage[0] = RESUME1;
         storage[1] = RESUME2;
@@ -138,9 +139,6 @@ public class MainTestArray {
         storage[3] = RESUME4;
         storage[4] = RESUME5;
 
-        for (int i = storage.length-1; i >= initSize; i--) {
-            storage[i] = null;
-        }
-
+        arrayStorage.setSize(initSize);
     }
 }
